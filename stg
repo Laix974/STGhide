@@ -10,6 +10,8 @@ if [[ $option == "em" ]]; then
     rm message.txt
 elif [[ $option == "ex" ]]; then
     steghide extract -sf $coverFile -p $password
+    clear
+    echo "Message:"
     cat message.txt
     rm message.txt
 else 
