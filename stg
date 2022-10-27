@@ -6,6 +6,7 @@ password=$(cat password.txt)
 
 if [[ $option == "em" ]]; then
     nano message.txt
+    clear
     steghide embed -cf $coverFile -ef message.txt -p $password
     rm message.txt
 elif [[ $option == "ex" ]]; then
